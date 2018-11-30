@@ -7,6 +7,7 @@ Python36-32
 from tkinter import *
 
 
+# converts the content in the entry field to celsius
 def celsius():
     fahr = float(degree_entry.get())
     cfahr = (5 / 9) * (fahr - 32)
@@ -16,6 +17,7 @@ def celsius():
     label_c.place(x=40, y=200)
 
 
+# converts the content in the entry field to fahrenheit
 def fahrenheit():
     cel = int(degree_entry.get())
     fcel = str(round((9 / 5) * cel + 32, 2))
@@ -25,10 +27,11 @@ def fahrenheit():
 
 
 root = Tk()
-root.iconbitmap(r'C:\Users\Prometheus\PycharmProjects\practice\py.ico')
+# creates the window for the app in the size of 500x500ppx
 root.geometry('500x500')
 
-canvas = Canvas(root, bg='darkgrey')
+# gives the background of the app color. 
+canvas = Canvas(root, bg='darkgrey') 
 
 instruct = "To convert a temperature simply type the\n temperature into the provided box,\n then click the " \
            "appropriate\n button to see your\n temperature converted.\nTo Quit press the Quit button"
